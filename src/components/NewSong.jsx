@@ -1,6 +1,6 @@
 import { useRef } from "react";
 
-export function Meter({onNewInput}){
+function NewSong({onNewInput}){
   const inputText = useRef();
     return(
         <input 
@@ -9,12 +9,14 @@ export function Meter({onNewInput}){
           type="text"
           ref={inputText} 
             onKeyUp={(event) => {
-              if (event.key=='Enter'){
+              if (event.key =='Enter'){
                 //users.push("Nuevo")
                 //setUsers([...users, 'nuevoooo'])//IMPORTANTE PARA MODIFICAR ARRAYS DINÁMICAMENTE
-                onNewInput(
-                   inputText.current.value
-                );
+                onNewInput({
+                  id: Uuid(),
+                  done: false,
+                  text: inputText.current.value,
+                });
                 inputText.current.value = ''
                 console.log("INTRO DADO");
               }
@@ -24,6 +26,6 @@ export function Meter({onNewInput}){
     )
     }
     
-    export default Meter
+    export default NewSong
     
     

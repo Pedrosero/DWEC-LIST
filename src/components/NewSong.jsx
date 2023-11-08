@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import { v4 as uuidv4 } from 'uuid';
 
 function NewSong({onNewInput}){
   const inputText = useRef();
@@ -13,7 +14,7 @@ function NewSong({onNewInput}){
                 //users.push("Nuevo")
                 //setUsers([...users, 'nuevoooo'])//IMPORTANTE PARA MODIFICAR ARRAYS DINÁMICAMENTE
                 onNewInput({
-                  id: Uuid(),
+                  id: uuidv4(),
                   done: false,
                   text: inputText.current.value,
                 });

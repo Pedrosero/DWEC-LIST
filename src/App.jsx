@@ -16,7 +16,13 @@ function App() {
     {id: uuidv4(), text: 'Otra canción (Miguel Bosé)', done:false}, 
     {id: uuidv4(), text: 'Nochecilla (Jose Manuel)', done:false},
   ]);//CON USESTATE LO MODIFICAMOS Y CON SETUSERS PASAMOS EL ARRAY MODIFICADO A USERS
-     
+  
+  const handleToggleComplete = (itemId) => {
+    const updatedSongs = songs.map((song) =>
+      song.id === itemId ? { ...song, done: !song.done } : song
+    );
+    setSongs(updatedSongs);
+  };
   return (
     <>
     
@@ -32,18 +38,26 @@ function App() {
       onNewInput={(inputText) =>{
         setSongs([...songs, inputText])
       }}/>
-      
-      </div>   
+      </div> 
+
+
       <div>
-      <ul className='Lista'>
-      {songs.map((song) => (
-        <ElemLista song={song} time="2" 
-        key={song} 
-        />
-      ))}
-    </ul>
+      <ul>
+          {songs.map((song) => (
+            <li key={song.id}>
+              <input
+                type="checkbox"
+                checked={song.done}
+                onChange={() => handleToggleComplete(song.id)}
+              />
+              <span style={{ textDecoration: song.done ? 'line-through' : 'none' }}>
+                {song.text}
+              </span>
+            </li>
+          ))}
+        </ul>
     </div>
     </>
-  )
+  );
 }
 export default App

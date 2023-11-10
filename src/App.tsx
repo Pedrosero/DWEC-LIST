@@ -3,12 +3,12 @@ import NewSong from './components/NewSong';
 //import ElemLista from './elemLista';
 import 'bootstrap/dist/css/bootstrap.min.css'
 //import { v4 as uuidv4 } from 'uuid'; // Importa la función v4 de uuid con un alias
-
+import { DelSong } from './components/DelSong';
 
 import './App.css'
 import { SongType } from './hooks/Types';
 
-function App() {
+export function App() {
   const initialSongs: SongType[] = [
     {id: crypto.randomUUID(), text: 'Mi gran noche (Raphael)', listen:false}, 
     {id: crypto.randomUUID(), text: 'Otra canción (Miguel Bosé)', listen:false}, 
@@ -24,13 +24,12 @@ function App() {
     setSongs(updatedSongs);
   };
 
+  const DeleteSong = (id: string) => {
+    const filteredSongs = songs.filter(song => song.id !==id)
+    setSongs(filteredSongs)
+  }
 
-  const EliminarClick = (SongType:string) => {
-    setSongs(())
-  };
 
-  
-  
   return (
     <>
     
@@ -41,7 +40,6 @@ function App() {
       
       <div>
       <span className='tituloInTarea'>Introduce una canción: </span>
-      
       <NewSong 
       onNewInput={(inputText) =>{
         setSongs([...songs, inputText])
@@ -62,10 +60,13 @@ function App() {
                 {song.text}
               </span>
               <input
+                className="botonEliminar"
                 type='button'
                 value={"Eliminar"}
-                onClick={}
-               // onDelete={() =>}
+                    onClick={()=>{
+                        DeleteSong(song.id)
+                    }}
+// onDelete={() =>}
               />
             </li>
           ))}

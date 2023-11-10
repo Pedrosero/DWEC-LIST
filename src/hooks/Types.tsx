@@ -5,6 +5,8 @@ export interface SongType{
 }
 
 
+
+
 export interface SongItemProps{
     SongItem : SongType,
     onListenChange: (song: SongType) => void,
@@ -16,5 +18,5 @@ export interface NewSongProps{
 }
 
 export interface EliminarBotonProps {
-    onEliminarClick: () => void;
+    onDeleteSong: (song:SongType) => void;
   }

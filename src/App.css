@@ -3,7 +3,6 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-  background-color: rgb(220, 236, 245);
 }
 
 
@@ -47,6 +46,7 @@
   border-radius: 30px;
   background-color: blue;
 }
+
 
 li{
   list-style-type: none;

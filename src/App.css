@@ -3,7 +3,10 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  background-color: rgb(220, 236, 245);
 }
+
+
 
 .logo {
   height: 6em;
@@ -33,10 +36,18 @@
   }
 }
 
-.card {
-  padding: 2em;
+/**************************************/
+
+.botonEliminar{
+  background-color: red;
+  color:wheat;
 }
 
-.read-the-docs {
-  color: #888;
+.botonGuardar{
+  border-radius: 30px;
+  background-color: blue;
+}
+
+li{
+  list-style-type: none;
 }

@@ -19,4 +19,4 @@ export interface NewSongProps{
 
 export interface EliminarBotonProps {
     onDeleteSong: (song:SongType) => void;
-  }
+}

@@ -21,6 +21,8 @@ En este proyecto yo me he encargado de hacer una lista de canciones en la cual e
 ## Manual de uso
 
 -`Añadir canción`
+
+
 ![Alt text](image.png)
 Solo se tendrá que escribir el nombre de la canción y pulsar la tecla 'Enter'
 

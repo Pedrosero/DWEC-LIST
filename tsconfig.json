@@ -20,6 +20,14 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+
+  "include": ["./src", "App.tsx"],
+  "references": [{ "path": "./tsconfig.node.json" }
+  ],
+  "typedocOptions":{
+    "entryPoints": ["./src"],
+    "out": "docs"
+  }
+
+  
 }

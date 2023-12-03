@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { SongType } from './hooks/Types';
 import "./App.css";
 import { useDrag, useDrop, DndProvider } from 'react-dnd';
+import React from 'react';
 
 export function App() {
   // Obtenemos las canciones almacenadas o utilizamos un array inicial si no hay ninguna.
@@ -85,10 +86,15 @@ export function App() {
 
   // Renderización del componente.
   return (
+    
     <>
-      <article>
-        <h1>My SongList✅</h1>
-      </article>
+    <div className='app-container'>
+      <div className="header-container">
+        <img src="src/assets/loguillo.png" alt="Logo" className="loguillo" />
+        <article>
+          <h1>My MusickList✅</h1>
+        </article>
+      </div>
       {/* Componente para agregar nuevas canciones */}
       <NewSong onNewInput={addSong} />
       <div className='center-container'>
@@ -103,6 +109,7 @@ export function App() {
       <div>
         {/* Componente para guardar las canciones */}
         <SongSave onSaveSong={saveSongs} />
+      </div>
       </div>
     </>
   );

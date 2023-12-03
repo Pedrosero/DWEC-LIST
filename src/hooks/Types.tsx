@@ -12,11 +12,3 @@ export interface SongItemProps{
     onListenChange: (song: SongType) => void,
 }
 
-
-export interface NewSongProps{
-    onNewInput: (song: SongType) => void,
-}
-
-export interface EliminarBotonProps {
-    onDeleteSong: (song:SongType) => void;
-}

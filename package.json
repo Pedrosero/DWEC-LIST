@@ -1,5 +1,5 @@
 {
-  "name": "songlist2",
+  "name": "DWEC-LIST",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -28,8 +28,6 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
     "typedoc": "^0.25.4",
-    "typedoc-plugin-merge-modules": "^5.1.0",
-    "typedoc-plugin-missing-exports": "^2.1.0",
     "typescript": "^5.0.2",
     "vite": "^4.4.5",
     "vite-plugin-checker": "^0.6.2"

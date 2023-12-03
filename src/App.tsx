@@ -5,8 +5,6 @@ import { SongSave } from './components/SongSave';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { SongType } from './hooks/Types';
 import "./App.css";
-import { useDrag, useDrop, DndProvider } from 'react-dnd';
-import React from 'react';
 
 export function App() {
   // Obtenemos las canciones almacenadas o utilizamos un array inicial si no hay ninguna.

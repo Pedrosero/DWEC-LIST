@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { SongType } from '../hooks/Types';
-import TrashIcon from './assets/icons/trash.svg';
 
 /**
  * Propiedades del componente SongItem.

@@ -24,23 +24,28 @@ En este proyecto yo me he encargado de hacer una lista de canciones en la cual e
 
 Solo se tendrá que escribir el nombre de la canción y pulsar la tecla 'Enter'
 
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+-`Eliminar canción`
 
+Pulsar en el botón de eliminar asignado a la canción que deseas eliminar
 
+-`Editar canción`
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Cambiar la canción en el campo de texto de la derecha por la nueva canción y pulsar el botón de editar
 
-- Configure the top-level `parserOptions` property like this:
+-`Tachar canción`
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+Pulsar en el 'checkbox' situado a la izquierda de la canción que deseas tachar
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+-`Buscar canción`
+
+Debajo de la barra de añadir canción con buscar palabras clave asociadas a la canción que quieras buscar 
+
+## Instalación
+
+Ejecutar los siguientes comandos:
+
+1º Clonar el repositorio con un 'git clone url-proyecto'
+
+2º Ejecutar el comando 'npm install'
+
+3º A continuación iniciar el proyecto con 'npm run dev'

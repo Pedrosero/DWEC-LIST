@@ -1,4 +1,3 @@
-import React from 'react';
 
 // Definición de las propiedades del componente SongSave
 export interface SongSaveProps {

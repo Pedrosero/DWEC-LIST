@@ -90,7 +90,6 @@ export function App() {
     <>
     <div className='app-container'>
       <div className="header-container">
-        <img src="src/assets/loguillo.png" alt="Logo" className="loguillo" />
         <article>
           <h1>My MusickList✅</h1>
         </article>

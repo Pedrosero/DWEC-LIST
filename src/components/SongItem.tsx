@@ -11,7 +11,7 @@ interface SongItemProps {
 
 
 export const SongItem: React.FC<SongItemProps> = ({ song, onSongComplete, onDeleteSong, onUpdateSong }) => {
- const [showModal, setShowModal]=useState(false);
+ const [, setShowModal]=useState(false);
  
 
  const songEditText=useRef<HTMLInputElement>(null);
@@ -39,7 +39,9 @@ function SongTextEdit(){
 
  return (
     <li>
+      <div className='container-list'>
       <input
+      className='check'
         type="checkbox"
         checked={song.listen}
         onChange={() => onSongComplete(song.id)}
@@ -63,16 +65,10 @@ function SongTextEdit(){
       ref={songEditText}
       defaultValue={song.text}
       />
-
-      <div className='modal-footer'>
-        <button type='button' className='button-cancel' onClick={closeEditSong}>
-          Cancelar
-        </button>
-        <button type='button' className='button-save' onClick={SongTextEdit}>
-          Guardar
-        </button>
-      </div>  
-      
+    <button type='button' className='button-save' onClick={SongTextEdit}>
+      Editar
+    </button>
+    </div>
     </li>
   );
 };

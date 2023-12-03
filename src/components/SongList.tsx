@@ -24,7 +24,7 @@ export const SongList: React.FC<SongListProps> = ({ songs, onSongComplete, onDel
     onUpdateSong(alterSong);
   }
   return (
-    <div>
+    <div className='contenido-container'>
       <span className='tituloInTarea'>Busca una canción: </span>
       <input
         type='text'
